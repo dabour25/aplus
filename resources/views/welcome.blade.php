@@ -35,18 +35,17 @@
             <div class="col-12 col-md-10 d-none d-xl-block">
                 <nav class="site-navigation position-relative text-right" role="navigation">
                     <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                        <li><a href="#section-home" class="nav-link">Home</a></li>
-                        <li class="has-children">
-                            <a href="#section-about" class="nav-link">About Us</a>
-                            <ul class="dropdown">
-                                <li><a href="#section-how-it-works" class="nav-link">How It Works</a></li>
-                                <li><a href="#section-our-team" class="nav-link">Our Team</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#section-services" class="nav-link">Services</a></li>
-                        <li><a href="#section-industries" class="nav-link">Industries</a></li>
-                        <li><a href="#section-blog" class="nav-link">Blog</a></li>
-                        <li><a href="#section-contact" class="nav-link">Contact</a></li>
+                        <li><a href="/" class="nav-link">Home</a></li>
+                        {{--<li class="has-children">--}}
+                            {{--<a href="/about" class="nav-link">About Us</a>--}}
+                            {{--<ul class="dropdown">--}}
+                                {{--<li><a href="/price" class="nav-link">Price List</a></li>--}}
+                                {{--<li><a href="#section-our-team" class="nav-link">Our Team</a></li>--}}
+                            {{--</ul>--}}
+                        {{--</li>--}}
+                        <li><a href="/about" class="nav-link">About Us</a></li>
+                        <li><a href="/price" class="nav-link">Price List</a></li>
+                        <li><a href="/contact" class="nav-link">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -60,7 +59,7 @@
         <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
                 <h1 class="text-white font-weight-light text-uppercase font-weight-bold" data-aos="fade-up">We Make Shipping</h1>
-                <p class="mb-5" data-aos="fade-up" data-aos-delay="100">A Logistics Company</p>
+                <p class="mb-5" data-aos="fade-up" data-aos-delay="100">A Plus</p>
                 <p data-aos="fade-up" data-aos-delay="200"><a href="https://free-template.co" class="btn btn-primary py-3 px-5 text-white">Get Started!</a></p>
             </div>
         </div>
@@ -490,11 +489,11 @@
 <footer class="site-footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-10">
                 <div class="row">
-                    <div class="col-md-5 mr-auto">
+                    <div class="col-md-6 mr-auto">
                         <h2 class="footer-heading mb-4">About Us</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam iure deserunt ut architecto dolores quo beatae laborum aliquam ipsam rem impedit obcaecati ea consequatur.</p>
+                        <p style="width: 80%">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam iure deserunt ut architecto dolores quo beatae laborum aliquam ipsam rem impedit obcaecati ea consequatur.</p>
                     </div>
                     <div class="col-md-3">
                         <h2 class="footer-heading mb-4">Quick Links</h2>
@@ -514,24 +513,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
-                <form action="#" method="post">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary text-white" type="button" id="button-addon2">Send</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
         </div>
         <div class="row pt-5 mt-5 text-center">
             <div class="col-md-12">
                 <div class="border-top pt-5">
                     <p>
 
-                        Copyright &copy;<script data-cfasync="false" src="{{asset('/js/sitejs/email-decode.min.js')}}"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        Copyright &copy;{{date('Y')}} All rights reserved | <a href="/">A Plus</a>
 
                     </p>
                 </div>
