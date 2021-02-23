@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\HomeController;
+use App\Http\Controllers\admin\BranchesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +26,5 @@ Route::get('/', function () {
 
 Route::group(['prefix' =>'admin','middleware' => 'auth:sanctum'],function () {
     Route::get('/',get_controller(HomeController::class,'index'));
+    Route::resource('/branches',get_controller(BranchesController::class));
 });

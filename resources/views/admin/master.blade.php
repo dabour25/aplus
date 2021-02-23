@@ -96,11 +96,11 @@
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fas fa-fw fa-folder"></i>
-                  <span>Advertises {{$newads==0?'':'('.$newads.')'}}</span>
+                  <span>Contact/Branches {{$newads==0?'':'('.$newads.')'}}</span>
               </a>
               <div class="dropdown-menu" aria-labelledby="pagesDropdown">
                   <a class="dropdown-item" href="/admindb/approve">Approve Ads ({{$newads}})</a>
-                  <a class="dropdown-item" href="/admindb/ads">Ads Control</a>
+                  <a class="dropdown-item" href="/admin/branches">Branches Control</a>
               </div>
           </li>
           <li class="nav-item dropdown">
