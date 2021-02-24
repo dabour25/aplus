@@ -6,7 +6,7 @@
       <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="/admins">Dashboard</a>
+          <a href="/admin">Dashboard</a>
         </li>
         <li class="breadcrumb-item active">Overview</li>
       </ol>

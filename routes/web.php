@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\HomeController;
 use App\Http\Controllers\admin\BranchesController;
+use App\Http\Controllers\admin\DynamicsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +28,11 @@ Route::get('/', function () {
 Route::group(['prefix' =>'admin','middleware' => 'auth:sanctum'],function () {
     Route::get('/',get_controller(HomeController::class,'index'));
     Route::resource('/branches',get_controller(BranchesController::class));
+
+    Route::group(['prefix' =>'dynamics'],function () {
+        Route::get('/home',get_controller(DynamicsController::class,'edit_home'));
+        Route::post('/home',get_controller(DynamicsController::class,'update_home'));
+        Route::get('/about',get_controller(DynamicsController::class,'edit_about'));
+        Route::post('/about',get_controller(DynamicsController::class,'update_about'));
+    });
 });
