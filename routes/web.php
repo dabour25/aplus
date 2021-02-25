@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\HomeController;
 use App\Http\Controllers\admin\BranchesController;
 use App\Http\Controllers\admin\DynamicsController;
+use App\Http\Controllers\site\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,10 +17,9 @@ use App\Http\Controllers\admin\DynamicsController;
 |
 */
 
-Route::get('/', function () {
-    $page='HOME';
-    return view('welcome',compact('page'));
-});
+Route::get('/',get_controller(MainController::class,'index'));
+Route::get('/contact',get_controller(MainController::class,'contact'));
+Route::post('/contact',get_controller(MainController::class,'sendMessage'));
 
 //Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //    return view('dashboard');

@@ -22,7 +22,7 @@
         @endif
         @if(Session::has('m'))
             <?php $a=[]; $a=session()->pull('m'); ?>
-            <div class="alert alert-{{$a[0]}}" style="width: 40%">
+            <div class="alert alert-{{$a[0]}}">
                 {{$a[1]}}
             </div>
         @endif
