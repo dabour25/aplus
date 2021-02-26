@@ -25,7 +25,7 @@
               <div class="mr-5">No New Messages</div>
               @endif
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="/admindb/messages">
+            <a class="card-footer text-white clearfix small z-1" href="/admin/messages">
               <span class="float-left">View Details</span>
               <span class="float-right">
                 <i class="fas fa-angle-right"></i>

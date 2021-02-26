@@ -5,6 +5,7 @@ use App\Http\Controllers\admin\HomeController;
 use App\Http\Controllers\admin\BranchesController;
 use App\Http\Controllers\admin\DynamicsController;
 use App\Http\Controllers\site\MainController;
+use App\Http\Controllers\admin\MessagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,7 @@ Route::post('/contact',get_controller(MainController::class,'sendMessage'));
 Route::group(['prefix' =>'admin','middleware' => 'auth:sanctum'],function () {
     Route::get('/',get_controller(HomeController::class,'index'));
     Route::resource('/branches',get_controller(BranchesController::class));
+    Route::resource('/messages',get_controller(MessagesController::class));
 
     Route::group(['prefix' =>'dynamics'],function () {
         Route::get('/home',get_controller(DynamicsController::class,'edit_home'));

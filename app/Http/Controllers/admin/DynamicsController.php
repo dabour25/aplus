@@ -4,11 +4,17 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Services\DynamicsService;
+use App\Services\MessagesService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
 
 
 class DynamicsController extends Controller
 {
+    public function __construct(MessagesService $messagesService){
+        $messagescount=$messagesService->newMessagesCount();
+        View::share('messagescount',$messagescount);
+    }
     public function edit_home(DynamicsService $dynamicsService){
         try{
             $home=$dynamicsService->getData();

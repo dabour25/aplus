@@ -40,7 +40,7 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a class="navbar-brand mr-1" href="/admindb">A+ Admin DB</a>
+      <a class="navbar-brand mr-1" href="/admin">A+ Admin DB</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -61,7 +61,7 @@
           </a>
         </li>
         <li class="nav-item dropdown no-arrow mx-1">
-          <a class="nav-link dropdown-toggle" href="/admindb/messages" title="{{$messagescount}} New Messages">
+          <a class="nav-link dropdown-toggle" href="/admin/messages" title="{{$messagescount}} New Messages">
             @if($messagescount>0)
             <span class="badge badge-danger">{{$messagescount}}</span>
             @endif
@@ -96,10 +96,10 @@
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fas fa-fw fa-folder"></i>
-                  <span>Contact/Branches {{$newads==0?'':'('.$newads.')'}}</span>
+                  <span>Contact/Branches {{$messagescount==0?'':'('.$messagescount.')'}}</span>
               </a>
               <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                  <a class="dropdown-item" href="/admindb/approve">Approve Ads ({{$newads}})</a>
+                  <a class="dropdown-item" href="/admin/messages">New Messages ({{$messagescount}})</a>
                   <a class="dropdown-item" href="/admin/branches">Branches Control</a>
               </div>
           </li>

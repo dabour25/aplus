@@ -6,10 +6,16 @@ use App\Http\Controllers\Controller;
 use App\RequestsWeb\User\CreateBranchValidator;
 use App\RequestsWeb\User\UpdateeBranchValidator;
 use App\Services\BranchesService;
+use App\Services\MessagesService;
+use Illuminate\Support\Facades\View;
 
 
 class BranchesController extends Controller
 {
+    public function __construct(MessagesService $messagesService){
+        $messagescount=$messagesService->newMessagesCount();
+        View::share('messagescount',$messagescount);
+    }
     public function index(BranchesService $branchesService){
         try{
             $branches=$branchesService->getBranches();
