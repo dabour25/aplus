@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <img src="{{asset('images/logo.png')}}" width="80px">
+            <img src="{{asset('images/logo_wide.png')}}" width="180px">
             <div>Welcome, Login to A plus</div>
         </x-slot>
 

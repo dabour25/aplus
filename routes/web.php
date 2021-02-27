@@ -35,6 +35,11 @@ Route::group(['prefix' =>'admin','middleware' => 'auth:sanctum'],function () {
         Route::get('/home',get_controller(DynamicsController::class,'edit_home'));
         Route::post('/home',get_controller(DynamicsController::class,'update_home'));
         Route::get('/about',get_controller(DynamicsController::class,'edit_about'));
+        Route::get('/about/create',get_controller(DynamicsController::class,'create_team'));
         Route::post('/about',get_controller(DynamicsController::class,'update_about'));
+        Route::post('/about/create',get_controller(DynamicsController::class,'store_team'));
+        Route::get('/about/{id}/edit',get_controller(DynamicsController::class,'edit_team'));
+        Route::put('/about/{id}',get_controller(DynamicsController::class,'update_team'));
+        Route::delete('/about/{id}',get_controller(DynamicsController::class,'destroy_team'));
     });
 });
