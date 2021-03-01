@@ -19,6 +19,7 @@ use App\Http\Controllers\admin\MessagesController;
 */
 
 Route::get('/',get_controller(MainController::class,'index'));
+Route::get('/about',get_controller(MainController::class,'about'));
 Route::get('/contact',get_controller(MainController::class,'contact'));
 Route::post('/contact',get_controller(MainController::class,'sendMessage'));
 
