@@ -29,22 +29,22 @@
                 @foreach($team as $t)
                 <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
                     <div class="person" style="color: #0b0b0b">
-                        <img src="images/person_1.jpg" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
+                        <img src="{{asset('/images/team').'/'.$t->image}}" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle">
                         <h3>{{$t->name}}</h3>
                         <p class="position">{{$t->role}}</p>
                         <p class="mb-4">{{$t->description}}</p>
                         <ul class="ul-social-circle">
                             @if($t->face_book)
-                            <li><a href="{{$t->face_book}}"><span class="icon-facebook"></span></a></li>
+                            <li><a href="{{$t->face_book}}" target="_blank"><span class="icon-facebook"></span></a></li>
                             @endif
                             @if($t->twitter)
-                                <li><a href="{{$t->twitter}}"><span class="icon-twitter"></span></a></li>
+                                <li><a href="{{$t->twitter}}" target="_blank"><span class="icon-twitter"></span></a></li>
                             @endif
                             @if($t->linked_in)
-                                <li><a href="{{$t->linked_in}}"><span class="icon-linkedin"></span></a></li>
+                                <li><a href="{{$t->linked_in}}" target="_blank"><span class="icon-linkedin"></span></a></li>
                             @endif
                             @if($t->instagram)
-                                <li><a href="{{$t->instagram}}"><span class="icon-instagram"></span></a></li>
+                                <li><a href="{{$t->instagram}}" target="_blank"><span class="icon-instagram"></span></a></li>
                             @endif
                         </ul>
                     </div>

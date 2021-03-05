@@ -303,19 +303,19 @@ jQuery(document).ready(function($) {
 
   // navigation
   var OnePageNavigation = function() {
-    var navToggler = $('.site-menu-toggle');
-   	$("body").on("click", "#site-navbar .site-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
-      e.preventDefault();
-      var hash = this.hash;
-      
-        $('html, body').animate({
-
-          scrollTop: $(hash).offset().top
-        }, 400, 'easeInOutExpo', function(){
-          window.location.hash = hash;
-        });
-
-    });
+    // var navToggler = $('.site-menu-toggle');
+   	// $("body").on("click", "#site-navbar .site-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
+    //   e.preventDefault();
+    //   var hash = this.hash;
+    //
+    //     $('html, body').animate({
+    //
+    //       scrollTop: $(hash).offset().top
+    //     }, 400, 'easeInOutExpo', function(){
+    //       window.location.hash = hash;
+    //     });
+    //
+    // });
 
     // $("#menu li a[href^='#']").on('click', function(e){
     //   e.preventDefault();

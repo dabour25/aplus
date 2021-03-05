@@ -20,7 +20,7 @@
                 <p class="color-black-opacity-5">Fill the form to get our services.</p>
             </div>
         </div>
-        <iframe src="{{$data[0]->content}}" title="googleform" style="border:none;width: 100%;height: 500px"></iframe>
+        <iframe src="{{$data[0]->content}}" title="googleform" class="iframe-main"></iframe>
     </div>
 </div>
 @stop
